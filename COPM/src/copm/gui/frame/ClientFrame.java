@@ -75,7 +75,6 @@ public class ClientFrame extends javax.swing.JFrame {
         ovalButton = new javax.swing.JToggleButton();
         rectangleButton = new javax.swing.JToggleButton();
         lineButton = new javax.swing.JToggleButton();
-        optionToolBar = new javax.swing.JToolBar();
         colorComboBox = new javax.swing.JComboBox<>();
         filledButton = new javax.swing.JToggleButton();
         jMenuBar1 = new javax.swing.JMenuBar();
@@ -202,8 +201,6 @@ public class ClientFrame extends javax.swing.JFrame {
         });
         jPanel4.add(lineButton);
 
-        optionToolBar.setRollover(true);
-
         colorComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "BLACK", "BLUE", "GREEN", "GRAY", "ORANGE", "PINK", "RED", "WHITE", "YELLOW" }));
         colorComboBox.setMaximumSize(new java.awt.Dimension(89, 24));
         colorComboBox.addItemListener(new java.awt.event.ItemListener() {
@@ -211,7 +208,7 @@ public class ClientFrame extends javax.swing.JFrame {
                 colorComboBoxItemStateChanged(evt);
             }
         });
-        optionToolBar.add(colorComboBox);
+        jPanel4.add(colorComboBox);
 
         filledButton.setText("Filled");
         filledButton.setFocusable(false);
@@ -222,9 +219,7 @@ public class ClientFrame extends javax.swing.JFrame {
                 filledButtonActionPerformed(evt);
             }
         });
-        optionToolBar.add(filledButton);
-
-        jPanel4.add(optionToolBar);
+        jPanel4.add(filledButton);
 
         jSplitPane1.setLeftComponent(jPanel4);
 
@@ -260,7 +255,6 @@ public class ClientFrame extends javax.swing.JFrame {
     private void textBoxButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textBoxButtonActionPerformed
         // TODO add your handling code here:
         selectedShape = Objects.TEXTBOX;
-        optionToolBar.setVisible(false);
         filledButton.setVisible(false);
         colorComboBox.setVisible(false);
     }//GEN-LAST:event_textBoxButtonActionPerformed
@@ -268,7 +262,6 @@ public class ClientFrame extends javax.swing.JFrame {
     private void ovalButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ovalButtonActionPerformed
         // TODO add your handling code here:
         selectedShape = Objects.OVAL;
-        optionToolBar.setVisible(true);
         filledButton.setVisible(true);
         colorComboBox.setVisible(true);
     }//GEN-LAST:event_ovalButtonActionPerformed
@@ -276,7 +269,6 @@ public class ClientFrame extends javax.swing.JFrame {
     private void rectangleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rectangleButtonActionPerformed
         // TODO add your handling code here:
         selectedShape = Objects.RECTANGLE;
-        optionToolBar.setVisible(true);
         filledButton.setVisible(true);
         colorComboBox.setVisible(true);
     }//GEN-LAST:event_rectangleButtonActionPerformed
@@ -340,7 +332,6 @@ public class ClientFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         selectedShape = Objects.LINE;
         filledButton.setVisible(false);
-        optionToolBar.setVisible(true);
         colorComboBox.setVisible(true);
     }//GEN-LAST:event_lineButtonActionPerformed
 
@@ -425,7 +416,6 @@ public class ClientFrame extends javax.swing.JFrame {
     public void init(Client manager){
         this.manager = manager;
         textBoxButton.setSelected(true);
-        optionToolBar.setVisible(false);
         filledButton.setVisible(false);
         colorComboBox.setVisible(false);
     }
@@ -487,6 +477,8 @@ public class ClientFrame extends javax.swing.JFrame {
     }
     public void showFrame(){
         setSize(1000,600);
+        jSplitPane1.setDividerLocation(479);
+        jSplitPane1.setEnabled(false);
         setVisible(true);
         this.addWindowListener(new WindowAdapter(){
             public void windowClosing(WindowEvent e){
@@ -508,7 +500,6 @@ public class ClientFrame extends javax.swing.JFrame {
     private javax.swing.JMenuItem localSaveButton;
     private javax.swing.JMenu menu;
     private javax.swing.JMenuItem newPage;
-    private javax.swing.JToolBar optionToolBar;
     private javax.swing.JToggleButton ovalButton;
     private javax.swing.JToolBar pageListBar;
     private javax.swing.ButtonGroup pageListButtonGroup;
