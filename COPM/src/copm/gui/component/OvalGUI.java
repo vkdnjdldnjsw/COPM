@@ -26,10 +26,10 @@ public class OvalGUI extends FiguresGUI{
         g.setColor(f.getColor());
         System.out.println("draw Oval");
         if(f.isItFilled()){
-            g.fillOval(0,0, textBox.getWidth(), textBox.getHeight());
+            g.fillOval(0,0, textBox.getWidth()-3, textBox.getHeight()-3);
         }
         else{
-            g.drawOval(0,0, textBox.getWidth(), textBox.getHeight());
+            g.drawOval(0,0, textBox.getWidth()-3, textBox.getHeight()-3);
         }
         super.paintComponent(g);
         

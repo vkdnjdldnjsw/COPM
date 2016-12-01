@@ -192,7 +192,7 @@ public class Server {
         };
         ser.start();
     }
-    public void execute(NetworkData data, SocketInfo clientInfo){
+    public synchronized void execute(NetworkData data, SocketInfo clientInfo){
         switch(data.getCommand()){
             case NetworkData.ADDNEWOBJECT:
                 appendLog("new Object");

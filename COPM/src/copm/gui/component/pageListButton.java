@@ -7,9 +7,12 @@ package copm.gui.component;
 
 import copm.model.container.Page;
 import copm.manager.control.Client;
+import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.UUID;
+import javax.swing.BorderFactory;
 import javax.swing.JToggleButton;
 
 /**
@@ -23,7 +26,11 @@ public class pageListButton extends JToggleButton implements ActionListener{
         super(title);
         this.pageID = pageID;
         this.manager = manager;
+        setBackground(Color.WHITE);
+        setForeground(Color.BLACK);
         addActionListener(this);
+        setBorderPainted(false);
+        setPreferredSize(new Dimension(100, getHeight()));
     }
 
     @Override

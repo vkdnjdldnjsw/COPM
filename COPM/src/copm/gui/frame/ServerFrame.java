@@ -165,6 +165,7 @@ public class ServerFrame extends javax.swing.JFrame {
         });
     }
     public void showFrame(){
+        setTitle("COPM - Server");
         try {
             ipLabel.setText("ip : " + InetAddress.getLocalHost().getHostAddress());
         } catch (UnknownHostException ex) {

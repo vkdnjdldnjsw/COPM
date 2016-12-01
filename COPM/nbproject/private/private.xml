@@ -3,47 +3,21 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/workspace/oop/1/newCOPM/src/copm/gui/event/PageEvent.java</file>
-            <file>file:/E:/workspace/oop/1/newCOPM/src/copm/manager/control/Manager.java</file>
-            <file>file:/E:/workspace/oop/1/newCOPM/src/copm/manager/control/Client.java</file>
-            <file>file:/E:/workspace/oop/1/newCOPM/src/newcopm/NewCOPM.java</file>
-            <file>file:/E:/workspace/oop/1/newCOPM/src/copm/gui/component/ObjectPanel.java</file>
-            <file>file:/E:/workspace/oop/1/newCOPM/src/copm/manager/data/ReviseData.java</file>
-            <file>file:/E:/workspace/oop/1/newCOPM/src/copm/gui/component/OvalGUI.java</file>
-            <file>file:/E:/workspace/oop/1/newCOPM/src/copm/model/container/Page.java</file>
-            <file>file:/E:/workspace/oop/1/newCOPM/src/copm/manager/data/AuthorityData.java</file>
-            <file>file:/E:/workspace/oop/1/newCOPM/src/copm/gui/component/pageListButton.java</file>
-            <file>file:/E:/workspace/oop/1/newCOPM/src/copm/manager/data/ReleaseAuthorityData.java</file>
-            <file>file:/E:/workspace/oop/1/newCOPM/src/copm/gui/frame/ServerFrame.java</file>
-            <file>file:/E:/workspace/oop/1/newCOPM/src/copm/manager/data/NickNameData.java</file>
-            <file>file:/E:/workspace/oop/1/newCOPM/src/copm/manager/data/NetworkData.java</file>
-            <file>file:/E:/workspace/oop/1/newCOPM/src/copm/manager/data/RemoveObjectData.java</file>
-            <file>file:/E:/workspace/oop/1/newCOPM/src/copm/model/component/TextBox.java</file>
-            <file>file:/E:/workspace/oop/1/newCOPM/src/copm/gui/component/PagePanel.java</file>
-            <file>file:/E:/workspace/oop/1/newCOPM/src/copm/gui/component/LineGUI.java</file>
-            <file>file:/E:/workspace/oop/1/newCOPM/src/copm/gui/component/TextBoxGUI.java</file>
-            <file>file:/E:/workspace/oop/1/newCOPM/src/copm/gui/event/ObjectsEvent.java</file>
-            <file>file:/E:/workspace/oop/1/newCOPM/src/copm/manager/data/ProjectData.java</file>
-            <file>file:/E:/workspace/oop/1/newCOPM/src/copm/manager/data/NewObjectData.java</file>
-            <file>file:/E:/workspace/oop/1/newCOPM/src/copm/gui/event/TextBoxEvent.java</file>
-            <file>file:/E:/workspace/oop/1/newCOPM/src/copm/model/component/Line.java</file>
-            <file>file:/E:/workspace/oop/1/newCOPM/src/copm/manager/control/Server.java</file>
-            <file>file:/E:/workspace/oop/1/newCOPM/src/copm/gui/event/TextBoxTextEvent.java</file>
-            <file>file:/E:/workspace/oop/1/newCOPM/src/copm/manager/data/InitData.java</file>
-            <file>file:/E:/workspace/oop/1/newCOPM/src/copm/gui/component/ObjectsGUI.java</file>
-            <file>file:/E:/workspace/oop/1/newCOPM/src/copm/gui/component/FiguresGUI.java</file>
-            <file>file:/E:/workspace/oop/1/newCOPM/src/copm/manager/data/NewPageData.java</file>
-            <file>file:/E:/workspace/oop/1/newCOPM/src/copm/manager/data/LoadPageData.java</file>
-            <file>file:/E:/workspace/oop/1/newCOPM/src/copm/manager/data/SaveData.java</file>
-            <file>file:/E:/workspace/oop/1/newCOPM/src/copm/gui/component/RectangleGUI.java</file>
-            <file>file:/E:/workspace/oop/1/newCOPM/src/copm/gui/frame/ClientFrame.java</file>
-            <file>file:/E:/workspace/oop/1/newCOPM/src/copm/manager/data/TextBoxTextData.java</file>
-            <file>file:/E:/workspace/oop/1/newCOPM/src/copm/model/container/Project.java</file>
-            <file>file:/E:/workspace/oop/1/newCOPM/src/copm/model/component/Figures.java</file>
-            <file>file:/E:/workspace/oop/1/newCOPM/src/copm/manager/data/AuthorityToData.java</file>
-            <file>file:/E:/workspace/oop/1/newCOPM/src/copm/manager/data/SocketInfo.java</file>
-            <file>file:/E:/workspace/oop/1/newCOPM/src/copm/manager/data/ExitData.java</file>
-            <file>file:/E:/workspace/oop/1/newCOPM/src/copm/model/component/Objects.java</file>
+            <file>file:/E:/workspace/COPM/COPM/src/copm/gui/event/ObjectsEvent.java</file>
+            <file>file:/E:/workspace/COPM/COPM/src/copm/gui/component/pageListButton.java</file>
+            <file>file:/E:/workspace/COPM/COPM/src/copm/gui/component/TextBoxGUI.java</file>
+            <file>file:/E:/workspace/COPM/COPM/src/copm/gui/frame/ClientFrame.java</file>
+            <file>file:/E:/workspace/COPM/COPM/src/copm/model/component/Objects.java</file>
+            <file>file:/E:/workspace/COPM/COPM/src/copm/model/container/Page.java</file>
+            <file>file:/E:/workspace/COPM/COPM/src/copm/gui/event/PageEvent.java</file>
+            <file>file:/E:/workspace/COPM/COPM/src/copm/manager/control/Client.java</file>
+            <file>file:/E:/workspace/COPM/COPM/src/copm/gui/frame/ServerFrame.java</file>
+            <file>file:/E:/workspace/COPM/COPM/src/copm/gui/component/OvalGUI.java</file>
+            <file>file:/E:/workspace/COPM/COPM/src/copm/manager/control/Server.java</file>
+            <file>file:/E:/workspace/COPM/COPM/src/copm/gui/event/TextBoxEvent.java</file>
+            <file>file:/E:/workspace/COPM/COPM/src/copm/gui/component/ObjectsGUI.java</file>
+            <file>file:/E:/workspace/COPM/COPM/src/copm/manager/control/Manager.java</file>
+            <file>file:/E:/workspace/COPM/COPM/src/copm/gui/event/TextBoxTextEvent.java</file>
         </group>
     </open-files>
 </project-private>

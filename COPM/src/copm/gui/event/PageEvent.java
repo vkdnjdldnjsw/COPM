@@ -50,11 +50,12 @@ public class PageEvent extends MouseInputAdapter{
         if(!manager.getFrame().getAuthority()){
             return;
         }
-        pressed = true;
         PagePanel pagePanel = frame.getNowPage();
         if(pagePanel.getFocuseObjects() != null){
             pagePanel.getFocuseObjects().setFocuse(false);
+            pagePanel.setFocueObjects(null);
         }
+        pressed = true;
         Objects tmp = null;
         switch(frame.getSelectedShape()){
             case Objects.TEXTBOX:
@@ -74,7 +75,7 @@ public class PageEvent extends MouseInputAdapter{
                 break;
         }
         manager.sendData(new NewObjectData(frame.getNowPage().getID(), tmp));
-        frame.getNowPage().setCursor(Cursor.getPredefinedCursor(PageEvent.getCursor(e.getX(), e.getY(), tmp.getX(), tmp.getY(), tmp.getWidth(), tmp.getHeight())));
+        frame.getNowPage().setCursor(Cursor.getPredefinedCursor(PageEvent.getCursor(e.getX(), e.getY(), tmp.getX(), tmp.getY(), 0, 0)));
         mInitX = e.getXOnScreen();
         mInitY = e.getYOnScreen();
         initX = e.getX();
@@ -111,7 +112,7 @@ public class PageEvent extends MouseInputAdapter{
     
     @Override
     public void mouseReleased(MouseEvent e) {
-        if(!manager.getFrame().getAuthority()){
+        if(!manager.getFrame().getAuthority() || frame.getNowPage().getFocuseObjects() == null){
             return;
         }
         pressed = false;

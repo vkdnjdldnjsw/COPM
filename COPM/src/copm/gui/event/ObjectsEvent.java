@@ -32,6 +32,7 @@ public class ObjectsEvent extends MouseInputAdapter{
     protected Client manager;
     protected int mInitX, mInitY;
     protected boolean pressed = false;
+    protected int initX, initY, initWidth, initHeight;
     
     public ObjectsEvent(ObjectsGUI object, Client manager){
         this.object = object;
@@ -52,6 +53,10 @@ public class ObjectsEvent extends MouseInputAdapter{
         object.setCursor(Cursor.getPredefinedCursor(PageEvent.getCursor(e.getX(), e.getY(), 0, 0, object.getWidth(), object.getHeight())));
         mInitX = e.getXOnScreen();
         mInitY = e.getYOnScreen();
+        initX = object.getX();
+        initY = object.getY();
+        initWidth = object.getWidth();
+        initHeight = object.getHeight();
         pressed = true;
     }
     @Override
@@ -62,7 +67,7 @@ public class ObjectsEvent extends MouseInputAdapter{
         if(!pressed){
             return;
         }
-        int x = object.getX(), y = object.getY(), width = object.getWidth(), height = object.getHeight();
+        int x = initX, y = initY, width = initWidth, height = initHeight;
         int ex = e.getXOnScreen() - mInitX, ey = e.getYOnScreen() - mInitY;
         
         if(object.getCursor().getType() == PageEvent.cursors[0]){
@@ -89,10 +94,7 @@ public class ObjectsEvent extends MouseInputAdapter{
             }
         }
         manager.sendData(new ReviseData(manager.getFrame().getNowPage().getID(), object.getID(), Objects.makeReviseData(x, y, width, height)));
-//        object.revise(TextBox.makeReviseData(x, y, width, height));
         manager.getFrame().getNowPage().repaint();
-        mInitX = e.getXOnScreen();
-        mInitY = e.getYOnScreen();
     }
      @Override
     public void mouseReleased(MouseEvent e) {
