@@ -28,4 +28,8 @@ public class InitData extends NetworkData implements Serializable{
     public ArrayList<UUID> getIds(){
         return ids;
     }
+    
+    public String getStringCommand(){
+        return "initData";
+    }
 }

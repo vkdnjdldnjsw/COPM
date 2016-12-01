@@ -63,21 +63,25 @@ public class ClientFrame extends javax.swing.JFrame {
         pageListButtonGroup = new javax.swing.ButtonGroup();
         popupCreatePage = new javax.swing.JPopupMenu();
         newPage = new javax.swing.JMenuItem();
-        jToolBar1 = new javax.swing.JToolBar();
-        serverSaveButton = new javax.swing.JButton();
-        localSaveButton = new javax.swing.JButton();
-        jSeparator2 = new javax.swing.JToolBar.Separator();
+        pageListPanel = new javax.swing.JPanel();
+        pageListBar = new javax.swing.JToolBar();
+        toolPanel = new javax.swing.JPanel();
+        jSplitPane1 = new javax.swing.JSplitPane();
+        jPanel1 = new javax.swing.JPanel();
+        authorityToLabel = new javax.swing.JLabel();
+        authorityButton = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
         textBoxButton = new javax.swing.JToggleButton();
         ovalButton = new javax.swing.JToggleButton();
         rectangleButton = new javax.swing.JToggleButton();
         lineButton = new javax.swing.JToggleButton();
-        filledButton = new javax.swing.JToggleButton();
+        optionToolBar = new javax.swing.JToolBar();
         colorComboBox = new javax.swing.JComboBox<>();
-        jSeparator1 = new javax.swing.JToolBar.Separator();
-        authorityButton = new javax.swing.JButton();
-        authorityToLabel = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
-        pageListBar = new javax.swing.JToolBar();
+        filledButton = new javax.swing.JToggleButton();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        menu = new javax.swing.JMenu();
+        serverSaveButton = new javax.swing.JMenuItem();
+        localSaveButton = new javax.swing.JMenuItem();
 
         newPage.setText("NewPage");
         newPage.addActionListener(new java.awt.event.ActionListener() {
@@ -94,118 +98,7 @@ public class ClientFrame extends javax.swing.JFrame {
             }
         });
 
-        jToolBar1.setRollover(true);
-
-        serverSaveButton.setText("Server Save");
-        serverSaveButton.setBorderPainted(false);
-        serverSaveButton.setFocusable(false);
-        serverSaveButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        serverSaveButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        serverSaveButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                serverSaveButtonActionPerformed(evt);
-            }
-        });
-        jToolBar1.add(serverSaveButton);
-
-        localSaveButton.setText("Local Save");
-        localSaveButton.setFocusable(false);
-        localSaveButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        localSaveButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        localSaveButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                localSaveButtonActionPerformed(evt);
-            }
-        });
-        jToolBar1.add(localSaveButton);
-        jToolBar1.add(jSeparator2);
-
-        shapeButtonGroup.add(textBoxButton);
-        textBoxButton.setSelected(true);
-        textBoxButton.setText("TextBox");
-        textBoxButton.setFocusable(false);
-        textBoxButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        textBoxButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        textBoxButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textBoxButtonActionPerformed(evt);
-            }
-        });
-        jToolBar1.add(textBoxButton);
-
-        shapeButtonGroup.add(ovalButton);
-        ovalButton.setText("Oval");
-        ovalButton.setToolTipText("");
-        ovalButton.setFocusable(false);
-        ovalButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        ovalButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        ovalButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ovalButtonActionPerformed(evt);
-            }
-        });
-        jToolBar1.add(ovalButton);
-
-        shapeButtonGroup.add(rectangleButton);
-        rectangleButton.setText("Rectangle");
-        rectangleButton.setFocusable(false);
-        rectangleButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        rectangleButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        rectangleButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rectangleButtonActionPerformed(evt);
-            }
-        });
-        jToolBar1.add(rectangleButton);
-
-        shapeButtonGroup.add(lineButton);
-        lineButton.setText("Line");
-        lineButton.setFocusable(false);
-        lineButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        lineButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        lineButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                lineButtonActionPerformed(evt);
-            }
-        });
-        jToolBar1.add(lineButton);
-
-        filledButton.setText("Filled");
-        filledButton.setFocusable(false);
-        filledButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        filledButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        filledButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                filledButtonActionPerformed(evt);
-            }
-        });
-        jToolBar1.add(filledButton);
-
-        colorComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "BLACK", "BLUE", "GREEN", "GRAY", "ORANGE", "PINK", "RED", "WHITE", "YELLOW" }));
-        colorComboBox.setMaximumSize(new java.awt.Dimension(89, 24));
-        colorComboBox.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                colorComboBoxItemStateChanged(evt);
-            }
-        });
-        jToolBar1.add(colorComboBox);
-        jToolBar1.add(jSeparator1);
-
-        authorityButton.setText("getAuthority");
-        authorityButton.setFocusable(false);
-        authorityButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        authorityButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        authorityButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                authorityButtonActionPerformed(evt);
-            }
-        });
-        jToolBar1.add(authorityButton);
-        jToolBar1.add(authorityToLabel);
-
-        getContentPane().add(jToolBar1, java.awt.BorderLayout.PAGE_START);
-
-        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+        pageListPanel.setBackground(new java.awt.Color(204, 204, 204));
 
         pageListBar.setBackground(new java.awt.Color(153, 153, 153));
         pageListBar.setFloatable(false);
@@ -220,20 +113,146 @@ public class ClientFrame extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout pageListPanelLayout = new javax.swing.GroupLayout(pageListPanel);
+        pageListPanel.setLayout(pageListPanelLayout);
+        pageListPanelLayout.setHorizontalGroup(
+            pageListPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pageListPanelLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(pageListBar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pageListBar, javax.swing.GroupLayout.DEFAULT_SIZE, 425, Short.MAX_VALUE)
+        pageListPanelLayout.setVerticalGroup(
+            pageListPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pageListBar, javax.swing.GroupLayout.DEFAULT_SIZE, 389, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jPanel1, java.awt.BorderLayout.LINE_START);
+        getContentPane().add(pageListPanel, java.awt.BorderLayout.LINE_START);
+
+        toolPanel.setLayout(new java.awt.GridLayout(0, 1));
+
+        jSplitPane1.setBorder(null);
+        jSplitPane1.setForeground(new java.awt.Color(204, 204, 204));
+        jSplitPane1.setEnabled(false);
+
+        jPanel1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
+        jPanel1.add(authorityToLabel);
+
+        authorityButton.setText("getAuthority");
+        authorityButton.setFocusable(false);
+        authorityButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        authorityButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        authorityButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                authorityButtonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(authorityButton);
+
+        jSplitPane1.setRightComponent(jPanel1);
+
+        jPanel4.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+
+        shapeButtonGroup.add(textBoxButton);
+        textBoxButton.setSelected(true);
+        textBoxButton.setText("TextBox");
+        textBoxButton.setFocusable(false);
+        textBoxButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        textBoxButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        textBoxButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textBoxButtonActionPerformed(evt);
+            }
+        });
+        jPanel4.add(textBoxButton);
+
+        shapeButtonGroup.add(ovalButton);
+        ovalButton.setText("Oval");
+        ovalButton.setToolTipText("");
+        ovalButton.setFocusable(false);
+        ovalButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        ovalButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        ovalButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ovalButtonActionPerformed(evt);
+            }
+        });
+        jPanel4.add(ovalButton);
+
+        shapeButtonGroup.add(rectangleButton);
+        rectangleButton.setText("Rectangle");
+        rectangleButton.setFocusable(false);
+        rectangleButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        rectangleButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        rectangleButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rectangleButtonActionPerformed(evt);
+            }
+        });
+        jPanel4.add(rectangleButton);
+
+        shapeButtonGroup.add(lineButton);
+        lineButton.setText("Line");
+        lineButton.setFocusable(false);
+        lineButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        lineButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        lineButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                lineButtonActionPerformed(evt);
+            }
+        });
+        jPanel4.add(lineButton);
+
+        optionToolBar.setRollover(true);
+
+        colorComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "BLACK", "BLUE", "GREEN", "GRAY", "ORANGE", "PINK", "RED", "WHITE", "YELLOW" }));
+        colorComboBox.setMaximumSize(new java.awt.Dimension(89, 24));
+        colorComboBox.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                colorComboBoxItemStateChanged(evt);
+            }
+        });
+        optionToolBar.add(colorComboBox);
+
+        filledButton.setText("Filled");
+        filledButton.setFocusable(false);
+        filledButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        filledButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        filledButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                filledButtonActionPerformed(evt);
+            }
+        });
+        optionToolBar.add(filledButton);
+
+        jPanel4.add(optionToolBar);
+
+        jSplitPane1.setLeftComponent(jPanel4);
+
+        toolPanel.add(jSplitPane1);
+
+        getContentPane().add(toolPanel, java.awt.BorderLayout.PAGE_START);
+
+        menu.setText("File");
+
+        serverSaveButton.setText("server Save");
+        serverSaveButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                serverSaveButtonActionPerformed(evt);
+            }
+        });
+        menu.add(serverSaveButton);
+
+        localSaveButton.setText("local Save");
+        localSaveButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                localSaveButtonActionPerformed(evt);
+            }
+        });
+        menu.add(localSaveButton);
+
+        jMenuBar1.add(menu);
+
+        setJMenuBar(jMenuBar1);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -241,6 +260,7 @@ public class ClientFrame extends javax.swing.JFrame {
     private void textBoxButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textBoxButtonActionPerformed
         // TODO add your handling code here:
         selectedShape = Objects.TEXTBOX;
+        optionToolBar.setVisible(false);
         filledButton.setVisible(false);
         colorComboBox.setVisible(false);
     }//GEN-LAST:event_textBoxButtonActionPerformed
@@ -248,6 +268,7 @@ public class ClientFrame extends javax.swing.JFrame {
     private void ovalButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ovalButtonActionPerformed
         // TODO add your handling code here:
         selectedShape = Objects.OVAL;
+        optionToolBar.setVisible(true);
         filledButton.setVisible(true);
         colorComboBox.setVisible(true);
     }//GEN-LAST:event_ovalButtonActionPerformed
@@ -255,6 +276,7 @@ public class ClientFrame extends javax.swing.JFrame {
     private void rectangleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rectangleButtonActionPerformed
         // TODO add your handling code here:
         selectedShape = Objects.RECTANGLE;
+        optionToolBar.setVisible(true);
         filledButton.setVisible(true);
         colorComboBox.setVisible(true);
     }//GEN-LAST:event_rectangleButtonActionPerformed
@@ -272,7 +294,7 @@ public class ClientFrame extends javax.swing.JFrame {
     private void pageListBarMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pageListBarMouseReleased
         // TODO add your handling code here:
         if(evt.isPopupTrigger()){
-            popupCreatePage.show(pageListBar, evt.getX(),jToolBar1.HEIGHT + evt.getY());
+            popupCreatePage.show(pageListPanel, evt.getX(),HEIGHT + evt.getY());
         }
     }//GEN-LAST:event_pageListBarMouseReleased
 
@@ -314,12 +336,20 @@ public class ClientFrame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_authorityButtonActionPerformed
 
+    private void lineButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lineButtonActionPerformed
+        // TODO add your handling code here:
+        selectedShape = Objects.LINE;
+        filledButton.setVisible(false);
+        optionToolBar.setVisible(true);
+        colorComboBox.setVisible(true);
+    }//GEN-LAST:event_lineButtonActionPerformed
+
     private void serverSaveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_serverSaveButtonActionPerformed
         // TODO add your handling code here:
         String s = (String)JOptionPane.showInputDialog(
-                    this,"Enter file Name:\n"
-                    ,"Save project in server",JOptionPane.PLAIN_MESSAGE,
-                    null, null, "");
+            this,"Enter file Name:\n"
+            ,"Save project in server",JOptionPane.PLAIN_MESSAGE,
+            null, null, "");
         if(s != null && s.length() > 0){
             System.out.println(s);
             manager.sendData(new SaveData(s));
@@ -330,12 +360,6 @@ public class ClientFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         manager.sendData(new ProjectData());
     }//GEN-LAST:event_localSaveButtonActionPerformed
-
-    private void lineButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lineButtonActionPerformed
-        // TODO add your handling code here:
-        selectedShape = Objects.LINE;
-        colorComboBox.setVisible(true);
-    }//GEN-LAST:event_lineButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -401,6 +425,7 @@ public class ClientFrame extends javax.swing.JFrame {
     public void init(Client manager){
         this.manager = manager;
         textBoxButton.setSelected(true);
+        optionToolBar.setVisible(false);
         filledButton.setVisible(false);
         colorComboBox.setVisible(false);
     }
@@ -475,20 +500,24 @@ public class ClientFrame extends javax.swing.JFrame {
     private javax.swing.JLabel authorityToLabel;
     private javax.swing.JComboBox<String> colorComboBox;
     private javax.swing.JToggleButton filledButton;
+    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JToolBar.Separator jSeparator1;
-    private javax.swing.JToolBar.Separator jSeparator2;
-    private javax.swing.JToolBar jToolBar1;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JSplitPane jSplitPane1;
     private javax.swing.JToggleButton lineButton;
-    private javax.swing.JButton localSaveButton;
+    private javax.swing.JMenuItem localSaveButton;
+    private javax.swing.JMenu menu;
     private javax.swing.JMenuItem newPage;
+    private javax.swing.JToolBar optionToolBar;
     private javax.swing.JToggleButton ovalButton;
     private javax.swing.JToolBar pageListBar;
     private javax.swing.ButtonGroup pageListButtonGroup;
+    private javax.swing.JPanel pageListPanel;
     private javax.swing.JPopupMenu popupCreatePage;
     private javax.swing.JToggleButton rectangleButton;
-    private javax.swing.JButton serverSaveButton;
+    private javax.swing.JMenuItem serverSaveButton;
     private javax.swing.ButtonGroup shapeButtonGroup;
     private javax.swing.JToggleButton textBoxButton;
+    private javax.swing.JPanel toolPanel;
     // End of variables declaration//GEN-END:variables
 }

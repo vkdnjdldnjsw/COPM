@@ -35,4 +35,8 @@ public class AuthorityData extends NetworkData implements Serializable{
         this.approval = approval;
     }
     
+    public String getStringCommand(){
+        return "get authority";
+    }
+    
 }

@@ -27,4 +27,8 @@ public class AuthorityToData extends NetworkData implements Serializable{
     public String getNickName(){
         return nickName;
     }
+    
+    public String getStringCommand(){
+        return "authorityTo";
+    }
 }

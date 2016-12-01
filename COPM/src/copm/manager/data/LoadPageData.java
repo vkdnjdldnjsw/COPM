@@ -38,4 +38,8 @@ public class LoadPageData extends NetworkData implements Serializable{
     public UUID getPageID(){
         return pageID;
     }
+    
+    public String getStringCommand(){
+        return "get Page";
+    }
 }

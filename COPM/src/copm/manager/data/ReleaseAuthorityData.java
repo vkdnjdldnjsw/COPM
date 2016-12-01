@@ -23,4 +23,7 @@ public class ReleaseAuthorityData extends NetworkData implements Serializable{
         return pageID;
     }
     
+    public String getStringCommand(){
+        return "release authority";
+    }
 }

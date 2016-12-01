@@ -33,4 +33,7 @@ public class ReviseData extends NetworkData implements Serializable{
         return reviseData;
     }
     
+    public String getStringCommand(){
+        return "revise object";
+    }
 }

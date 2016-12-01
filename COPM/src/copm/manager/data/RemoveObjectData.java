@@ -27,4 +27,8 @@ public class RemoveObjectData extends NetworkData{
     public UUID getObjectID(){
         return objectID;
     }
+    
+    public String getStringCommand(){
+        return "remove object";
+    }
 }

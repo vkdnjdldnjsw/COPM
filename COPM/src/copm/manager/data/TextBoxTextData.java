@@ -31,4 +31,7 @@ public class TextBoxTextData extends NetworkData{
         return text;
     }
     
+    public String getStringCommand(){
+        return "eidt text";
+    }
 }

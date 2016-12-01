@@ -13,7 +13,7 @@ import java.util.UUID;
  *
  * @author Arsene holmes
  */
-public class NetworkData implements Serializable{
+public abstract class NetworkData implements Serializable{
     public static final int CONNECT = -1;
     public static final int INIT = 0;
     public static final int ADDNEWPAGE = 1;
@@ -37,4 +37,5 @@ public class NetworkData implements Serializable{
     public int getCommand(){
         return command;
     }
+    public abstract String getStringCommand();
 }

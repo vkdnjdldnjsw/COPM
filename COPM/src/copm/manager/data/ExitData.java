@@ -27,4 +27,8 @@ public class ExitData extends NetworkData implements Serializable{
     public boolean getAuthority(){
         return authority;
     }
+    
+    public String getStringCommand(){
+        return "exit";
+    }
 }

@@ -22,4 +22,7 @@ public class SaveData extends NetworkData implements Serializable{
         return name;
     }
     
+    public String getStringCommand(){
+        return "save";
+    }
 }

@@ -35,4 +35,8 @@ public class NewObjectData extends NetworkData implements Serializable{
     public Objects getObjects(){
         return object;
     }
+    
+    public String getStringCommand(){
+        return "new object";
+    }
 }

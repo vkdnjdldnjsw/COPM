@@ -161,7 +161,7 @@ public class Server {
                                         appendLog("recieve socket error");
                                         return;
                                     }
-                                    appendLog("recieve data : " + data.getCommand());
+                                    appendLog("\nrecieve data : " + data.getStringCommand());
                                     if(data.getCommand() == NetworkData.EXIT){
                                         ExitData exitData = (ExitData)data;
                                         clients.remove(clientInfo);
@@ -202,8 +202,8 @@ public class Server {
                 sendData(newObjectData);
                 break;
             case NetworkData.ADDNEWPAGE:
-                appendLog("new Page");
                 NewPageData newPageData = (NewPageData)data;
+                appendLog("new Page" + " : " + newPageData.getTitle());
                 UUID pageID = project.newPage(newPageData.getTitle());
                 System.out.println(pageID.toString());
                 newPageData.setPageID(pageID);

@@ -26,4 +26,8 @@ public class ProjectData extends NetworkData implements Serializable{
         return project;
     }
     
+    public String getStringCommand(){
+        return "get project data";
+    }
+    
 }

@@ -30,4 +30,7 @@ public class NewPageData extends NetworkData implements Serializable{
         return title;
     }
     
+    public String getStringCommand(){
+        return "add new page";
+    }
 }
