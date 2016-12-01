@@ -124,6 +124,23 @@ public class PagePanel extends JPanel{
         }
         return null;
     }
+    @Override
+    public void update(Graphics g){
+        super.update(g);
+        System.out.println("update");
+        repaint();
+    }
+    @Override
+    public void paint(Graphics g){
+        super.paint(g);
+        System.out.println("painted");
+        for(int i = 0; i<list.size(); i++){
+            System.out.println("repaint : " + list.get(i).getID());
+            list.get(i).draw(g);
+        }
+        System.out.println("complete painted");
+        setBackground(Color.WHITE);
+    }
     public void paintComponent(Graphics g) {
         super.paintComponent(g);  // paint parent's background
         for(int i = 0; i<list.size(); i++){

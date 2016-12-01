@@ -521,8 +521,7 @@ public class ClientFrame extends javax.swing.JFrame {
         nowPage.repaint();
     }
     public void showFrame(){
-        setSize((int)Toolkit.getDefaultToolkit().getScreenSize().getWidth() , (int)Toolkit.getDefaultToolkit().getScreenSize().getHeight());
-        setResizable(false);
+//        setResizable(false);
         setVisible(true);
         jLabel1.setSize(pageListBar.getWidth(), jPanel4.getWidth());
         setBackground(new Color(63,81,181));
