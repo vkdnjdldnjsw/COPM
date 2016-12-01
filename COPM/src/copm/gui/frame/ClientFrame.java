@@ -381,6 +381,7 @@ public class ClientFrame extends javax.swing.JFrame {
     private void colorButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_colorButtonActionPerformed
         // TODO add your handling code here:
         selectedColor = new JColorChooser().showDialog(null, "Select Color", selectedColor);
+        newPage.repaint();
     }//GEN-LAST:event_colorButtonActionPerformed
 
     private void pageListBarMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pageListBarMouseReleased
