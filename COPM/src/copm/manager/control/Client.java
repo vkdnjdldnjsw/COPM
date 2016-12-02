@@ -61,8 +61,6 @@ public class Client {
     }
     
     public void beClient(String serverIP, int portNum){
-        
-        
         try{
             mySocket = new Socket(serverIP, portNum);
             server = new SocketInfo(mySocket);

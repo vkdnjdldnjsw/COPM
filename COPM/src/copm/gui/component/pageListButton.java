@@ -9,6 +9,7 @@ import copm.model.container.Page;
 import copm.manager.control.Client;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.UUID;
@@ -32,7 +33,16 @@ public class pageListButton extends JToggleButton implements ActionListener{
         setBorderPainted(false);
         setPreferredSize(new Dimension(100, getHeight()));
     }
-
+    @Override
+    public void paint(Graphics g){
+        super.paint(g);
+        setBounds(getX(), getY(), 98, getHeight());
+    }
+    @Override
+    public void paintComponent(Graphics g){
+        super.paintComponent(g);
+        setBounds(getX(), getY(), 98, getHeight());
+    }
     @Override
     public void actionPerformed(ActionEvent e) {
         System.out.println("clicked : " +getText()+" ID : " + pageID.toString());
