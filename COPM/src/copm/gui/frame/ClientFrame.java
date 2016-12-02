@@ -155,7 +155,7 @@ public class ClientFrame extends javax.swing.JFrame {
         jPanel4.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
         serverSaveButton.setBackground(new java.awt.Color(255, 235, 59));
-        serverSaveButton.setText("server Save");
+        serverSaveButton.setText("serverSave");
         serverSaveButton.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         serverSaveButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -165,7 +165,7 @@ public class ClientFrame extends javax.swing.JFrame {
         jPanel4.add(serverSaveButton);
 
         localSaveButton.setBackground(new java.awt.Color(255, 235, 59));
-        localSaveButton.setText("local Save");
+        localSaveButton.setText("localSave");
         localSaveButton.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         localSaveButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
